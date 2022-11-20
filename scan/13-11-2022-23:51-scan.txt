@@ -1,0 +1,41 @@
+Отчёт о состоянии системы:
+Пользователи системы: _accessoryupdater, _analyticsd, _appleevents, _applepay, _assetcache, _biome, _captiveagent, _cmiodalassistants, _coreaudiod, _ctkd, _displaypolicyd, _distnote, _driverkit, _fpsd, _gamecontrollerd, _hidd, _iconservices, _installcoordinationd, _locationd, _mdnsresponder, _nearbyd, _netbios, _networkd, _nsurlsessiond, _rmd, _softwareupdate, _spotlight, _timed, _trustd, _usbmuxd, _windowserver, ekaterinavoloskan, root
+Процессов запущено: 543
+Пользовательских процессов:
+ekaterinavoloskan: 311
+root: 164
+_rmd: 7
+_softwareupdate: 7
+_locationd: 7
+_spotlight: 5
+_coreaudiod: 4
+_driverkit: 3
+_applepay: 3
+_cmiodalassistants: 3
+_windowserver: 2
+_assetcache: 2
+_fpsd: 2
+_appleevents: 2
+_gamecontrollerd: 2
+_nsurlsessiond: 2
+_installcoordinationd: 1
+_ctkd: 1
+_nearbyd: 1
+_netbios: 1
+_captiveagent: 1
+_hidd: 1
+_accessoryupdater: 1
+_mdnsresponder: 1
+_networkd: 1
+_trustd: 1
+_analyticsd: 1
+_biome: 1
+_iconservices: 1
+_timed: 1
+_usbmuxd: 1
+_distnote: 1
+_displaypolicyd: 1
+Всего памяти используется: 68.4%
+Всего CPU используется: 78.2%
+Больше всего памяти использует: /usr/libexec/smd
+Больше всего CPU использует: /System/Library/Fram
