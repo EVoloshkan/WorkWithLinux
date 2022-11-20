@@ -1,6 +1,4 @@
 import datetime
-import math
-import os
 import subprocess
 import sys
 
@@ -33,15 +31,15 @@ if __name__ == '__main__':
         current_cpu = float(row['%CPU'])
         mem += current_mem
         cpu += current_cpu
-        if max_mem >= current_mem:
+        if max_mem <= current_mem:
             max_mem = current_mem
             max_mem_name = row['COMMAND']
-        if max_cpu >= current_cpu:
+        if max_cpu <= current_cpu:
             max_cpu = current_cpu
             max_cpu_name = row['COMMAND']
 
     out = sys.stdout
-    with open(f'./scan/{datetime.datetime.now():%d-%m-%Y-%H:%M-scan}.txt', 'w') as f:
+    with open(f'./scan/{datetime.datetime.now():%d-%m-%Y-%H:%M-scan}.txt', 'w+') as f:
         sys.stdout = f
         print('Отчёт о состоянии системы:')
         print(f"Пользователи системы: "
@@ -54,3 +52,7 @@ if __name__ == '__main__':
         print(f'Всего CPU используется: {round(cpu, 2)}%')
         print(f'Больше всего памяти использует: {max_mem_name[0:20]}')
         print(f'Больше всего CPU использует: {max_cpu_name[0:20]}')
+        sys.stdout = out
+        f.seek(0)
+        for line in f:
+            print(line.strip("\n"))
